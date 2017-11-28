@@ -71,7 +71,7 @@ public class TravelRequestProcess extends AbstractExample {
 
 
     // accept or do not accept vacation request
-    final State bossState2 = new StateBuilder().subjectModel(boss).name("Reiseantrag prüfen")
+    final State bossState2 = new StateBuilder().subjectModel(boss).name("Reiseantrag prÃ¼fen")
         .functionType(StateFunctionType.FUNCTION).build();
 
 
@@ -347,7 +347,7 @@ public class TravelRequestProcess extends AbstractExample {
 
     // enter hotel information
     final State enterHotelInfo = new StateBuilder().subjectModel(travelMgt)
-        .name("Hotelbuchung durchführen").functionType(StateFunctionType.SEND).build();
+        .name("Hotelbuchung durchfÃ¼hren").functionType(StateFunctionType.SEND).build();
 
     final BusinessObjectModel hotel =
         new BusinessObjectModelBuilder().name("Hotelbuchung").addToState(enterHotelInfo).build();

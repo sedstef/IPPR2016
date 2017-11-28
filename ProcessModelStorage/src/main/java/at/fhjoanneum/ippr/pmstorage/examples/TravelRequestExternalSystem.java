@@ -75,7 +75,7 @@ public class TravelRequestExternalSystem extends AbstractExample {
 
 
     // accept or do not accept vacation request
-    final State bossState2 = new StateBuilder().subjectModel(boss).name("Reiseantrag prüfen")
+    final State bossState2 = new StateBuilder().subjectModel(boss).name("Reiseantrag prÃ¼fen")
         .functionType(StateFunctionType.FUNCTION).build();
 
     final Transition bossT1 =
