@@ -1,52 +1,30 @@
 #!/bin/sh
 
-echo Start IPPR2016
-echo ##########################################################
+echo building IPPR2016
+../../ConfigurationService/gradlew build
+../../EventLogger/gradlew build
+../../ExternalCommunicator/gradlew build
+../../Gateway/gradlew build
+../../GUI/gradlew build
+../../GUI-dev/gradlew build
+../../ModellingPlatform/gradlew build
+../../ModellingPlatform-dev/gradlew build
+../../ProcessEngine/gradlew build
+../../ProcessModelStorage/gradlew build
+../../ServiceDiscovery/gradlew build
 
-echo Start ConfigurationService
-echo ##########################################################
-./start_configuration_service.sh &
-echo ##########################################################
 
-echo Start ServiceDiscovery
-echo ##########################################################
-./start_service_discovery.sh &
-echo ##########################################################
+echo Start Services
+java -jar ../../ConfigurationService/build/libs/*.jar&
+java -jar ../../EventLogger/build/libs/*.jar&
+java -jar ../../ExternalCommunicator/build/libs/*.jar&
+java -jar ../../Gateway/build/libs/*.jar&
+java -jar ../../GUI/build/libs/*.jar&
+#java -jar ../../GUI-dev/build/libs/*.jar&
+java -jar ../../ModellingPlatform/build/libs/*.jar&
+#java -jar ../../ModellingPlatform-dev/build/libs/*.jar&
+java -jar ../../ProcessEngine/build/libs/*.jar&
+java -jar ../../ProcessModelStorage/build/libs/*.jar&
+java -jar ../../ServiceDiscovery/build/libs/*.jar&
 
-echo Start ProcessModelStorage
-echo ##########################################################
-./start_pms.sh &
-echo ##########################################################
-
-echo Start Gateway
-echo ##########################################################
-./start_gateway.sh &
-echo ##########################################################
-
-echo Start ProcessEngine
-echo ##########################################################
-./start_engine.sh &
-echo ##########################################################
-
-echo Start ExternalCommunicator
-echo ##########################################################
-./start_ec.sh &
-echo ##########################################################
-
-echo Start EventLogger
-echo ##########################################################
-./start_event_logger.sh &
-echo ##########################################################
-
-echo Start GUI
-echo ##########################################################
-./start_gui.sh &
-echo ##########################################################
-
-echo Start ModellingPlatform
-echo ##########################################################
-./start_mpf.sh &
-echo ##########################################################
-
-echo Installation and boot finished
 echo ##########################################################
