@@ -41,7 +41,7 @@ repositories {
 
 dependencies {
 	// ippr libraries
-	compile project(':SpringCommons')
+	compile project(':IPPR2016:SpringCommons')
 
 	compile 'org.springframework.cloud:spring-cloud-starter-zuul'
 	compile'org.springframework.cloud:spring-cloud-starter-eureka'

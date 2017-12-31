@@ -1,5 +1,5 @@
-include ':Persistence'
-project(':Persistence').projectDir = new File(settingsDir, '../Persistence')
+include ':IPPR2016:Persistence'
+project(':IPPR2016:Persistence').projectDir = new File(settingsDir, '../Persistence')
 
-include ':SpringCommons'
-project(':SpringCommons').projectDir = new File(settingsDir, '../SpringCommons')
+include ':IPPR2016:SpringCommons'
+project(':IPPR2016:SpringCommons').projectDir = new File(settingsDir, '../SpringCommons')

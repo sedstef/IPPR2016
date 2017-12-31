@@ -32,8 +32,8 @@ repositories {
 }
 
 dependencies {
-	compile project(':SpringCommons')
-	compile project(':Persistence')
+	compile project(':IPPR2016:SpringCommons')
+	compile project(':IPPR2016:Persistence')
 
 	compile'org.springframework.cloud:spring-cloud-starter-eureka'
 	compile 'org.springframework.cloud:spring-cloud-starter-config'
