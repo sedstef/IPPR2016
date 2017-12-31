@@ -1,2 +1,0 @@
-include ':IPPR2016:SpringCommons'
-project(':IPPR2016:SpringCommons').projectDir = new File(settingsDir, '../SpringCommons')
